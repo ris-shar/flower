@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <h6 style="color:white;">Hello Kishu, I am really sorry I couldn't make that thing from the video. <br>I tried but couldn't. But this changes colours when you touch it (even tho it will look weird af, <br>😭😭😭)</h6><br>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waving Lotus</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+        .lotus {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-origin: center;
+            animation: waving 2s infinite alternate ease-in-out;
+        }
+        .petal {
+            width: 60px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: 50% 100%;
+            background: radial-gradient(circle, #ff6600 0%, transparent 70%);
+            border-radius: 50% 50% 0 0;
+            cursor: pointer;
+        }
+        .petal:nth-child(2) {
+            transform: rotate(30deg);
+        }
+        .petal:nth-child(3) {
+            transform: rotate(60deg);
+        }
+        .petal:nth-child(4) {
+            transform: rotate(90deg);
+        }
+        .petal:nth-child(5) {
+            transform: rotate(120deg);
+        }
+        .petal:nth-child(6) {
+            transform: rotate(150deg);
+        }
+        .petal:nth-child(7) {
+            transform: rotate(180deg);
+        }
+        .petal:nth-child(8) {
+            transform: rotate(210deg);
+        }
+        .petal:nth-child(9) {
+            transform: rotate(240deg);
+        }
+        .petal:nth-child(10) {
+            transform: rotate(270deg);
+        }
+        .petal:nth-child(11) {
+            transform: rotate(300deg);
+        }
+        .petal:nth-child(12) {
+            transform: rotate(330deg);
+        }
+        @keyframes waving {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(20deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="lotus">
+        <div class="petal" onclick="changeColor(this)"></div>
+        <div class="petal" onclick="changeColor(this)"></div>
+        <div class="petal" onclick="changeColor(this)"></div>
+        <div class="petal" onclick="changeColor(this)"></div>
+        <div class="petal" onclick="changeColor(this)"></div>
+        <div class="petal" onclick="changeColor(this)"></div>
+        <div class="petal" onclick="changeColor(this)"></div>
+        <div class="petal" onclick="changeColor(this)"></div>
+        <div class="petal" onclick="changeColor(this)"></div>
+        <div class="petal" onclick="changeColor(this)"></div>
+        <div class="petal" onclick="changeColor(this)"></div>
+        <div class="petal" onclick="changeColor(this)"></div>
+    </div>
+     
+    <script>
+        function changeColor(petal) {
+            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            petal.style.background = randomColor;
+        }
+    </script>
+</body>
+</html>
